@@ -7,6 +7,8 @@ class HouseService {
   async getHouses() {
     const response = await api.get(`api/houses`)
     console.log("GOT HOUSES", response.data);
+    const houses = response.data.map(pojo => new House(pojo))
+    AppState.houses = houses
   }
 }
 
