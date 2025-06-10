@@ -28,6 +28,58 @@
     <section class="container">
       <div class="row">
         <div class="col-12">
+          <h1>Houses</h1>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form onsubmit="">
+            <div class="mb-3">
+              <label for="house-bedroom" class="form-label">Bedroom Count</label>
+              <input type="number" class="form-control" id="house-bedroom" placeholder="Bedroom Count..." required
+                max="20" name="bedroom">
+            </div>
+            <div class="mb-3">
+              <label for="house-bathroom" class="form-label">Bathroom Count</label>
+              <input type="number" class="form-control" id="house-bathroom" placeholder="Bathroom Count..." required
+                max="20" name="bathroom">
+            </div>
+            <div class="mb-3">
+              <label for="house-level" class="form-label">Level Count</label>
+              <input type="number" class="form-control" id="house-level" placeholder="Level Count..." required max="20"
+                name="level">
+            </div>
+
+            <div class="mb-3">
+              <label for="house-img-url" class="form-label">House ImgUrl</label>
+              <input type="url" class="form-control" id="house-img-url" placeholder="House ImgUrl..." required
+                maxlength="500" name="imgUrl">
+            </div>
+            <div class="mb-3">
+              <label for="house-year" class="form-label">House Year</label>
+              <input type="number" class="form-control" id="house-year" placeholder="House Year..." required max="2026"
+                name="year">
+            </div>
+            <div class="mb-3">
+              <label for="house-price" class="form-label">House Price</label>
+              <input type="number" class="form-control" id="house-price" placeholder="House Price..." required
+                max="10000000" name="price">
+            </div>
+            <div class="mb-3">
+              <label for="house-description" class="form-label">House Description</label>
+              <input type="text" class="form-control" id="house-description" placeholder="House Description..." required
+                maxlength="100" name="description">
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-12">
           <h1>Cars</h1>
         </div>
       </div>
