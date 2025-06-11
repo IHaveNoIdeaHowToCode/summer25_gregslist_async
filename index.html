@@ -34,9 +34,9 @@
     </section>
     <section class="container">
       <div class="row">
-        <div id="house-form-column" class="col-md-6 mb-3">
+        <div id="house-form" class="col-md-6 mb-3">
           <h2>Login and list your House!</h2>
-          <form onsubmit="">
+          <form onsubmit="app.houseController.submitHouse()" class="d-none">
             <div class="mb-3">
               <label for="house-bedroom" class="form-label">Bedroom Count</label>
               <input type="number" class="form-control" id="house-bedroom" placeholder="Bedroom Count..." required
@@ -72,6 +72,11 @@
               <label for="house-description" class="form-label">House Description</label>
               <input type="text" class="form-control" id="house-description" placeholder="House Description..." required
                 maxlength="100" name="description">
+            </div>
+            <div class="text-end">
+              <button class="btn btn-outline-success" type="submit">
+                Submit
+              </button>
             </div>
           </form>
         </div>

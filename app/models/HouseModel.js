@@ -24,7 +24,7 @@ export class House {
     <div class="col-md-6 mb-3">
           <div class="position-relative shadow house-card" style="border-color: black;">
             <img src="${this.imgUrl}" alt="pic of house" class="house-img">
-            <span class="house-price d-inline-block px-3 py-1 bg-dark text-success fs-2">${this.price}</span>
+            <span class="house-price d-inline-block px-3 py-1 bg-dark text-success fs-2">$${this.price.toLocaleString()}</span>
             <div class="p-3">
               <h2>${this.year}</h2>
               <p class="fs-4 fw-bold">${this.bedrooms} Bedrooms</p>
