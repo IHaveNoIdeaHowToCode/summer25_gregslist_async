@@ -36,11 +36,31 @@ export class House {
                   <img src="${this.creatorPicture}" alt="${this.creatorName.replace('<div>', '🍌')}" class="creator-img">
                   <p class="mb-0">${this.creatorName.replace('<div>', '🍌')}</p>
                 </div>
+                ${this.deleteButton}
                 <small>${this.createdAt.toLocaleDateString()}</small>
               </div>
             </div>
           </div>
         </div>
+    `
+  }
+
+  get deleteButton() {
+    const identity = AppState.identity
+
+    // NOT LOGGED IN
+    if (identity == null) {
+      return ''
+    }
+
+
+    // NOT CORRECT USER
+    if (identity.id != this.creatorId) {
+      return ''
+    }
+
+    return `
+    <button onclick="app.houseController.deleteHouseConfirm('${this.id}')" class="btn btn-outline-danger" type="button">Delete House</button>
     `
   }
 }

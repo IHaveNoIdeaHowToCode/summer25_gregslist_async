@@ -46,6 +46,22 @@ export class HouseController {
       console.error('createHouse failed', error);
     }
   }
+
+  async deleteHouseConfirm(houseId) {
+    const confirmed = await Pop.confirm('Are you sure you want to delete this house?', 'It will be gone forever', 'Yes I am sure', 'Nevermind!')
+
+    if (!confirmed) {
+      return
+    }
+
+    try {
+      await houseService.deleteHouse(houseId)
+    } catch (error) {
+      Pop.error(error, 'ERROR', 'Could not delete house!')
+      console.error('deleteHouse failed', error);
+
+    }
+  }
 }
 
 // function querySelector(arg0) {
